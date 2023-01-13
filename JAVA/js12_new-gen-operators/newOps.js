@@ -169,6 +169,10 @@ console.log(p1, p2, p4)
 //!    ayri dizi yada objelere kopyalanmasini saglayabilir.
 
 //* REST: (Arrays)
+
+// array destruction son da olmalı
+//dizilerde sıraya göre hareket eder
+
 const autos = ["anadol", "reno", "bmw", "mercedes", "ferrari"]
 
 const [x, y, ...z] = autos // Destrc.
@@ -184,18 +188,18 @@ const personel = {
 
 const { age, ...fullName } = personel
 
-console.log(age)
-console.log(fullName)
+console.log(age)//30 olur
+console.log(fullName)// {pName: 'john', surname: 'smith', job: 'developer'}
 
 const { pName: name } = fullName
-console.log(name)
+console.log(name)// john
 
 //! 2- Bir fonksiyonun argumanlarini diziye cevirmek icin kullanilabilir.
 
 const sum = (a, b) => a + b
 
 //? hata vermez fakat sadece 2 argumani toplar
-console.log("SUM:", sum(2, 4, 6))
+console.log("SUM:", sum(2, 4, 6))//6 
 
 const sumAll = (...numbers) => {
   //! bireysel degerleri bir array'e cevirdi.
@@ -204,14 +208,14 @@ const sumAll = (...numbers) => {
   return numbers.reduce((s, v) => s + v, 0)
 }
 
-console.log("SUM:", sumAll(2, 4, 6, 8))
+console.log("SUM:", sumAll(2, 4, 6, 8))// SUM:20
 
 const showName = (name, surname, ...titles) => {
   console.log(titles)
   const summary = `${name} ${surname} is a ${titles.join(" and ")}`
   console.log(summary)
 }
-
+// join diziyi stringe çevirir
 showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad")
 
 //*==================================================
@@ -224,26 +228,32 @@ showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad")
 //* array concatination
 const flyingVehicles = ["aircraft", "helicopter", "drone"]
 const automobile = ["truck", "suv", "Car"]
-const allVehicles1 = [flyingVehicles, automobile]
+
+const allVehicles1 = [flyingVehicles, automobile]// 2 elemanlı array oluşturur
+
 console.log(allVehicles1)
 const allVehicles2 = [...automobile, "Bicyle", ...flyingVehicles]
 console.log(allVehicles2)
 
 const citrus = ["orange", "lime", "lemon"]
 const fruits = ["apple", ...citrus, "banana", "chery", "pear"]
-console.log(fruits)
+console.log(fruits)// ['apple', 'orange', 'lime', 'lemon', 'banana', 'chery', 'pear']
+//spread = büryan yemegi gibi diyebiliriz
 
 //* String spread
 let buryan = "Buryan yemegi hangi yoreye aittir."
 const charBuryan = [...buryan]
-console.log(buryan)
+console.log(buryan)//Buryan yemegi hangi yoreye aittir.
 console.log(charBuryan)
 
 //* Max() - Dizileri fonksiyonlara acik bir sekilde parametre vermek icin
-console.log(Math.max(1, 2, 3, 33, 4, 5))
+console.log(Math.max(1, 2, 3, 33, 4, 5))//33 
 
 const numbers = [3, 1, 23, 49, 52, 44]
-console.log(Math.max(...numbers))
+console.log(Math.max(...numbers))//52 hepsini dönderir ve en büyügünü gösterir
+ 
+
+
 
 //* Array Copy
 
@@ -256,8 +266,10 @@ console.log(herNumbers)
 const hisNumbers = [...herNumbers] //? Deep Copy
 hisNumbers.push(-55)
 hisNumbers[5][1] = 88 //? Nested olan degerler deep copy olmaz.
+
 console.log(hisNumbers)
 console.log(herNumbers)
+
 
 //! spread operatoru ile iki dizi arasinda kopyalama yapilabilir. bunlar birbirinden bagimsiz calisabilir. nested larda deep copy mantigi yoktur.
 

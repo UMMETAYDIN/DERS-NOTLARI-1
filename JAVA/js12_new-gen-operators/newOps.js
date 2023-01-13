@@ -274,6 +274,7 @@ console.log(herNumbers)
 //! spread operatoru ile iki dizi arasinda kopyalama yapilabilir. bunlar birbirinden bagimsiz calisabilir. nested larda deep copy mantigi yoktur.
 
 //* Object Copy
+
 const myObj = { a: 1, b: 2, c: 4 }
 const herObj = { a: 2, z: 4, c: 3 }
 
@@ -285,4 +286,5 @@ console.log(myObj)
 console.log(copyObj)
 
 const combinedObjs = { ...myObj, ...herObj }
-console.log(combinedObjs)
+console.log(combinedObjs)//{a: 2, b: 2, c: 3, z: 4}
+aynı key varsa sonra gelen öncekini ezer 

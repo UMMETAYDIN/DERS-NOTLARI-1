@@ -287,4 +287,4 @@ console.log(copyObj)
 
 const combinedObjs = { ...myObj, ...herObj }
 console.log(combinedObjs)//{a: 2, b: 2, c: 3, z: 4}
-aynı key varsa sonra gelen öncekini ezer 
+// aynı key varsa sonra gelen öncekini ezer 

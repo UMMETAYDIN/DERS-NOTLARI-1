@@ -7,8 +7,7 @@ document.title = "❤️ DOM"
 //*===========================================
 
 const myHeader = document.getElementById("header")
-console.log(myHeader)
-
+console.log(myHeader)//
 myHeader.style.color = "blue"
 myHeader.style.backgroundColor = "yellow"
 
@@ -21,6 +20,10 @@ button.style.border = "none"
 button.style.borderRadius = "10px"
 button.style.fontSize = "20px"
 textInput.style.padding = "0.7rem"
+textInput.style.borderRadius="10px"
+textInput.style.backgroundColor= "yellow"
+textInput.style.padding="14px"
+
 
 //*===========================================
 //*          GETELEMENTSBYTAGNAME()

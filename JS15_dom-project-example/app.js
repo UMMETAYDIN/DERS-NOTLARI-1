@@ -2,7 +2,7 @@
 
 const yourChoice = document.getElementById("your-choice")
 const pcChoice = document.getElementById("pc-choice")
-const select = document.querySelector(".select")
+const select = document.querySelector(".select")// taş kagıt ve makas ın divini yakaladık
 let userSelect; // Bizim seçimimiz
 let pcRandom; // Pc nin seçimi
 
@@ -25,8 +25,8 @@ const final = document.getElementById("final");
 // Ekrandan tıklanan elemente göre bizim seçimimizi ekrana yazdırır.
 
 select.addEventListener("click", (e) => {
-    // console.log(e.target.className)
-    // console.log(e.target.getAttribute("alt"))
+    // console.log(e.target.className)// taş kagıt ve makasın classname sine ulaşıyoruz
+    // console.log(e.target.getAttribute("alt"))// alt attribute ile de aynı şekilde ulaşabiliriz
     // Bu if le boş tıklamanın önüne geçiyoruz.
     if (e.target.getAttribute("alt")) {
 
@@ -194,3 +194,77 @@ makasImage.addEventListener('click',(e)=>{
     console.log(e)
     yourChoice.innerHTML = `<img src="./assets/makas.png"></img>`;
 }) */ 
+
+
+
+// let a=0;
+// let b=0;
+// let c=0;
+// let rand;
+
+// for(let i=0; i<100; i++{
+//     rand=Math.floor(Math.random()*3)
+
+
+//     if (ran===0) {
+//         a++
+        
+//     } else if(rand===1){
+//         ++b
+
+//     }else{
+//         ++c
+//     }
+// }
+
+// console.log({a}, {b}, {c})
+
+
+// localStorage ye string olarak depolanır veriler 
+// bilgisaarın saklama alanıdır boyutu küçük ise veriler burada saklanır
+// kulllanımı kolaydır
+// küçük boyutludur
+
+
+// dizi içerisinde obje ler JSON, formatındadır
+
+// forEach= dolan demektir
+// parse = güncelle demektir
+// setitem = göndermek için 
+// get item okumak için 
+
+
+// degişkenler tırnak içerisine alınmaz
+// target = yakala hedefi şeklinde düşünebiliriz
+// toogle= false olan degeri true  çevirir
+// toogle = true olan değeri false ye çevirir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
